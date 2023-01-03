@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--配置UserServiceImpl-->
+    <bean id="userService" class="cqwu.jwy.impl.UserServiceImpl">
+        <!--name表示调用的方法名（删除set并首字母大写），ref表示注入userDao123-->
+        <property name="userDao" ref="userDao123"/>
+    </bean>
+    <!--配置UserDaoImpl-->
+    <bean id="userDao123" class="cqwu.jwy.impl.UserDaoImpl"/>
+</beans>
